@@ -53,6 +53,13 @@ function test_builtin_append($arr1, $arr2){
 }
 
 function test_array_merge($arr1, $arr2){
-	$result = array_merge($arr1, $arr2);
-	return $result;
+	return array_merge($arr1, $arr2);
+}
+
+function test_array_prepend($arr1, $arr2){
+	for ($i = count($arr1) - 1; $i >= 0; $i--){
+		array_unshift($arr2, $arr1[$i]);
+	}
+
+	return $arr1;
 }
