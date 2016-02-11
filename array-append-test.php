@@ -63,3 +63,7 @@ function test_array_prepend($arr1, $arr2){
 
 	return $arr1;
 }
+
+function test_safe_array_merge($arr1, $arr2){
+	return array_merge(array_values($arr1), array_values($arr2));
+}
